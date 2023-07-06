@@ -1,0 +1,19 @@
+version: '3'
+services:
+  livekit:
+    image: livekit/livekit-server:v1.4.3
+    command: --config /etc/livekit.yaml
+    restart: unless-stopped
+    volumes:
+      - ./livekit.yaml:/etc/livekit.yaml
+    ports:
+      - "7880:7880"
+      - "7881:7881"
+      - "59950-60000:59950-60000/udp"
+  webhook-proxy:
+    build: .
+    environment:
+      - GOOGLE_APPLICATION_CREDENTIALS=/app/.config/gcloud/application_default_credentials.json
+    volumes:
+      - $HOME/.config/gcloud:/app/.config/gcloud
+      - ./config.yaml:/app/config.yaml

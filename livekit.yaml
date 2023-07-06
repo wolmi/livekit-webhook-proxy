@@ -1,0 +1,25 @@
+# This config file only for test purposes
+# please don't use it for production
+
+port: 7880
+bind_addresses:
+    - "0.0.0.0"
+rtc:
+    tcp_port: 7881
+    port_range_start: 59950
+    port_range_end: 60000
+    use_external_ip: false
+    enable_loopback_candidate: true
+
+turn:
+    enabled: false
+
+keys:
+    # set your pair key and secret before starting the service
+    # key: secret
+
+webhook:
+    # Set the key configured previously
+    # api_key:
+    urls:
+        - "http://webhook-proxy:8081/publish"
