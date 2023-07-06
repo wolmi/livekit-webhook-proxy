@@ -39,4 +39,4 @@ docker-compose up
 
 You will need to generate a valid token with your `key:secret` and you hace test it in the [React example](https://example.livekit.io/#/) from Livekit.
 
-In the environment variables of the proxy it assumes you have `gcloud` properly configured with de `application_default_credentials.json` located in the default home folder. If you want to use a different service account or it's not in the right location plase eddit the [docker-compose.yaml](docker-composer.yaml)
+In the environment variables of the proxy it assumes you have `gcloud` properly configured with de `application_default_credentials.json` located in the default home folder. If you want to use a different service account or it's not in the right location plase eddit the [docker-compose.yaml](docker-compose.yaml)
