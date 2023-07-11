@@ -8,7 +8,7 @@ COPY go.mod .
 COPY go.sum .
 RUN go mod download
 
-COPY server.go .
+COPY main.go .
 COPY utils ./utils
 RUN go build -ldflags="-w -s" -o /go/bin/livekit-webhook-proxy .
 RUN upx /go/bin/livekit-webhook-proxy
