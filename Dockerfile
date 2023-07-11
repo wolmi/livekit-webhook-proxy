@@ -11,7 +11,7 @@ RUN go mod download
 COPY main.go .
 COPY cmd ./cmd
 COPY utils ./utils
-COPY types ./type
+COPY types ./types
 RUN go build -ldflags="-w -s" -o /go/bin/livekit-webhook-proxy .
 RUN upx /go/bin/livekit-webhook-proxy
 
