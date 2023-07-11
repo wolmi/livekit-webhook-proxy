@@ -16,5 +16,5 @@ jobs:
             password: ${{secrets.GITHUB_TOKEN}}
         - name: 'Build Inventory Image'
           run: |
-            docker build . --tag ghcr.io/${{ env.GITHUB_REPOSITORY }}:${{ github.ref_name }}
-            docker push ghcr.io/${{ env.GITHUB_REPOSITORY }}:${{ github.ref_name }}
+            docker build . --tag ghcr.io/${{ vars.GITHUB_REPOSITORY }}:${{ github.ref_name }}
+            docker push ghcr.io/${{ vars.GITHUB_REPOSITORY }}:${{ github.ref_name }}
