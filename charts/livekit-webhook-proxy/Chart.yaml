@@ -1,6 +1,6 @@
 apiVersion: v2
 name: livekit-webhook-proxy
-description: A Helm chart for Kubernetes
+description: This chart deploys a Livekit webhook proxy to integrate with GCP PubSub
 
 # A chart can be either an 'application' or a 'library' chart.
 #
