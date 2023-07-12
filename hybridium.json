@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "hybridium",
+  "private_key_id": "ba570b26b7a18c79f25bde08766d46a4a464d175",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDTzg8AVCHth141\nF4Dvx7gGZjY187+4ql5K3kvEA/Si8xr1T7DuFjWrHdXWDzrr0uR5CdPBn+7+Rsbw\nVqmfxa4q9bHMjUmyRlrHeFZxR4HJMZDwJx/LgzufDt++11ZrCecvyfJnKSZu7vuc\nVB4p+xql+IDn0fZMNgS7EI48mNeTtWsxEH3YL2QPgVpsCYPdXTu8UTQQjn29C1+N\nXF34zFAT8qQTCF5I5O/FSqSHRZNmPWJx0iw/Yl6QhzbMVz8rwxUp4GRtnJhN5Zrt\npoZa1buZuT/oELn65kaHxFzw9PvPjeUsCLBzYapO45R5ESiRNhA1Z3e6RjBhCW0k\nC6NNbjQLAgMBAAECggEAKWoUr9VDjwzVhF8UpI3yMzogJnuDROn3Jv+BZBH77zLG\n1imfaGZqVwut6L2woTTq3KnpwGXz1r9jHdJsN2PxUtAY1GzZ+KReEru6d0rqmzr4\nYqTbyDDgYxEG+etkJ+jXThZYMgivTaioBSDDhyTkyIgnOGzrEmrLkQJDNaETIfvP\nqYEeVi3h3MvFi+ajcozdlUdsb2rvjP6ofxD3J8ge1LpCts33XVLgNskRYVoatxJC\nQ5qQW4V1am6a6cwiqwpoZjKaCyBbHPcJ1k/4fHe9NyjGp8gaakdD92PmmakiVhh2\ncLSJzFTG2tBT346uUiPzp/AMq5dkV1XolPJiZtVprQKBgQDq1GEC1l5kZyJ6Zz2/\nBwV8Ty8eUB5wstjEL1gMuIrfRFXgrhWLd5CHuug7pdY2vbBLKSFpXwmaZyzMzQN3\n/2qBwSMJXbpC6FtNzL1hbg37TQNQAozwswVcJ+IhHFbhMQABJuPDuI+M6sUYhKtJ\n0nGgDfgRCtcFU9Ap3AzPrK8HBQKBgQDm5ktB2Ix8ReEmkLvXCGt2d0+9LNuChKUR\nQlvkzIVub8yPbpBkQdPU0GoZALCd3vrhP3bgqTFh0zr2eF6Bra2PjSiMqUrXJKuy\niWLe0MmYbUYjL/H/WhWXSRopGbwPYzIN1FHp59QJ9hcPEgDY01GP80KZhl6ZKZEL\nhvwXwaIbzwKBgDzlVD7rHlFFGYDKcw2toXOKCTsAJdSt3F6LtHagCIs7alW4byfa\nmqVIB98n8zQA3s2u3dY4agIbTVfStlqQ5qq9TfuozZt6K+sx885nPsLzRq+h6bCl\ni/dI9HAHrFP7Y/fogNoJa1hsrS3dgZnEM+kAllq9B+N+x5WDVeMo8b6NAoGANMKE\nibwwhaj2BHjn4v+yhnRGzSQ12EH08dem5cXx60UyiceqyK3d+G/S/nmQ4dH0o4l7\n4WPnu8GnZHAmsBz+XqHTlSiNyFFBxl7sL5unpOO7Ngkbk8yCyHnUt3WA6kcxRcWx\nHfByHACWTkQ/20uWBH2CR1BTx02fLfIfIlKFdzMCgYEAtVvijiDCOdYW2RSTpBAH\ngZwf4L6R1FKOsrxqjuMXji3mZ4DOyGSRJH1oYQPg8BxIaGW3jFJ025af113AT9ys\nvYrZdtx3rdQEX44bqgj4fhpkPlwitRl9Nu7JUBOV7cfbKVKlk4vTFqbbraZMfhwi\n9GLYtAmEX++MKItj3Xmj4dU=\n-----END PRIVATE KEY-----\n",
+  "client_email": "miquel-local-dev@hybridium.iam.gserviceaccount.com",
+  "client_id": "108982830466600650913",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/miquel-local-dev%40hybridium.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
