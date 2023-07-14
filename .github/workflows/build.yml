@@ -26,4 +26,4 @@ jobs:
               with:
                 context: .
                 push: true
-                tags: ghcr.io/MashMeTV/livekit-webhook-proxy:${{ github.ref_name }}
+                tags: ghcr.io/mashmetv/livekit-webhook-proxy:${{ github.ref_name }}

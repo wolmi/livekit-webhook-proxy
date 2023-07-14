@@ -11,7 +11,7 @@ services:
       - "7881:7881"
       - "59950-60000:59950-60000/udp"
   webhook-proxy:
-    image: ghcr.io/MashMeTV/livekit-webhook-proxy:v1.0.0
+    image: ghcr.io/mashmetv/livekit-webhook-proxy:v1.0.0
     build: .
     environment:
       - GOOGLE_APPLICATION_CREDENTIALS=/app/.config/gcloud/application_default_credentials.json
