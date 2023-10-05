@@ -20,7 +20,7 @@ func TestProxy_Init(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			tt.p.Init(tt.args.ctx)
+			tt.p.Init(tt.args.ctx, false, 9040)
 		})
 	}
 }
