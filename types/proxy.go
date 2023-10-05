@@ -29,6 +29,8 @@ func (p *Proxy) Init(ctx context.Context) {
 	logLevel := viper.GetBool("debug")
 	if logLevel {
 		p.echo.Logger.SetLevel(log.DEBUG)
+	} else {
+		p.echo.Logger.SetLevel(log.INFO)
 	}
 
 	p.echo.GET("/", func(c echo.Context) error {
