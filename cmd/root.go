@@ -49,7 +49,7 @@ func init() {
 	rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.livekit-webhook-proxy.yaml)")
 
 	rootCmd.PersistentFlags().Bool("debug", false, "Debug mode")
-	viper.BindPFlag("debug", rootCmd.PersistentFlags().Lookup("debug"))
+	viper.BindPFlag("debug", rootCmd.PersistentFlags().Lookup("debug")) // nolint
 
 	rootCmd.Flags().IntP("port", "p", 8080, "Port to start the proxy")
 	viper.BindPFlag("port", rootCmd.Flags().Lookup("port")) // nolint
