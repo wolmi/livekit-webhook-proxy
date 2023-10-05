@@ -7,6 +7,7 @@ import (
 	"context"
 	"fmt"
 	"livekit-webhook-proxy/types"
+	"livekit-webhook-proxy/utils"
 	"log"
 	"os"
 	"strings"
@@ -26,6 +27,9 @@ and manages to publish them in a GCP PubSub topic.`,
 
 	Run: func(cmd *cobra.Command, args []string) {
 		ctx := context.Background()
+
+		pm := utils.PromMetrics{}
+		pm.StartPrometheus(viper.GetBool("prometheus.enable"), viper.GetInt("prometheus.port"))
 
 		proxy := types.Proxy{}
 
@@ -59,6 +63,12 @@ func init() {
 
 	rootCmd.Flags().StringP("project-id", "P", "", "GCP ProjectId")
 	viper.BindPFlag("project-id", rootCmd.Flags().Lookup("project-id")) // nolint
+
+	rootCmd.Flags().Bool("prometheus.enable", true, "Enable Prometheus metrics")
+	viper.BindPFlag("prometheus.enable", rootCmd.Flags().Lookup("prometheus.enable")) // nolint
+
+	rootCmd.Flags().Int("prometheus.port", 9040, "Prometheus port")
+	viper.BindPFlag("prometheus.port", rootCmd.Flags().Lookup("prometheus.port")) // nolint
 }
 
 // initConfig reads in config file and ENV variables if set.
