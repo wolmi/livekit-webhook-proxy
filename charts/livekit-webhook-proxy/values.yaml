@@ -15,6 +15,9 @@ config:
   topic: livekit-webhook
   # replace with your existing GCP project ID
   project-id: <gcp-project>
+  prometheus:
+    enabled: true
+    port: 9040
 
 imagePullSecrets: []
 nameOverride: ""
@@ -29,9 +32,7 @@ serviceAccount:
   # If not set and create is true, a name is generated using the fullname template
   name: ""
 
-podAnnotations:
-  sidecar.istio.io/inject: "false"
-  linkerd.io/inject: disabled
+podAnnotations: {}
 
 podSecurityContext:
   {}
