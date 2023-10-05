@@ -1,0 +1,10 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "draftPR": true,
+  "extends": [
+    "config:base",
+    ":semanticCommits"
+  ],
+  "labels": ["dependencies"],
+  "ignorePaths": ["**/charts/**"]
+}
