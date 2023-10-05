@@ -43,6 +43,6 @@ func (m *PromMetrics) StartPrometheus(enable bool, port int) {
 }
 
 // Generic function to handle a helath check
-func (m *PromMetrics) healthCheck(w http.ResponseWriter, r *http.Request) {
+func (m *PromMetrics) healthCheck(w http.ResponseWriter, r *http.Request) { // no lint
 	_, _ = w.Write([]byte("ok"))
 }
