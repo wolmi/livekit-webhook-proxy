@@ -1,6 +1,5 @@
 /*
 Copyright © 2023 Miquel Ramon Ortega Tido
-
 */
 package main
 
