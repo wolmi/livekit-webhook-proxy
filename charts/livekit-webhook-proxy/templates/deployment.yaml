@@ -13,8 +13,12 @@ spec:
       {{- include "livekit-webhook-proxy.selectorLabels" . | nindent 6 }}
   template:
     metadata:
-      {{- with .Values.podAnnotations }}
       annotations:
+      {{- if .Values.config.prometheus.enabled }}
+        prometheus.io/scrape: true
+        prometheus.io/port: {{ .Values.config.prometheus.port }}
+      {{- end }}
+      {{- with .Values.podAnnotations }}
         {{- toYaml . | nindent 8 }}
       {{- end }}
         checksum/config: {{ include (print $.Template.BasePath "/configmap.yaml") . | sha256sum }}
@@ -42,6 +46,11 @@ spec:
             - name: http
               containerPort: {{ .Values.service.port }}
               protocol: TCP
+          {{- if .Values.config.prometheus.enabled }}
+            - name: metrics
+              containerPort: {{ .Values.config.prometheus.port }}
+              protocol: TCP
+          {{- end }}          
           livenessProbe:
             httpGet:
               path: /
