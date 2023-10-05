@@ -2,7 +2,10 @@ module livekit-webhook-proxy
 
 go 1.20
 
-require cloud.google.com/go/compute/metadata v0.2.3
+require (
+	cloud.google.com/go/compute/metadata v0.2.3
+	github.com/labstack/gommon v0.4.0
+)
 
 require (
 	cloud.google.com/go v0.110.2 // indirect
@@ -13,7 +16,6 @@ require (
 	github.com/google/s2a-go v0.1.4 // indirect
 	github.com/googleapis/enterprise-certificate-proxy v0.2.3 // indirect
 	github.com/googleapis/gax-go/v2 v2.11.0 // indirect
-	github.com/labstack/gommon v0.4.0 // indirect
 	github.com/mattn/go-colorable v0.1.13 // indirect
 	github.com/mattn/go-isatty v0.0.17 // indirect
 	github.com/valyala/bytebufferpool v1.0.0 // indirect
