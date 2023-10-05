@@ -31,8 +31,6 @@ and manages to publish them in a GCP PubSub topic.`,
 
 		proxy.Init(ctx)
 
-		
-
 	},
 }
 
@@ -50,14 +48,17 @@ func init() {
 
 	rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.livekit-webhook-proxy.yaml)")
 
+	rootCmd.PersistentFlags().Bool("debug", false, "Debug mode")
+	viper.BindPFlag("debug", rootCmd.PersistentFlags().Lookup("debug")) // nolint
+
 	rootCmd.Flags().IntP("port", "p", 8080, "Port to start the proxy")
-	viper.BindPFlag("port", rootCmd.Flags().Lookup("port"))
+	viper.BindPFlag("port", rootCmd.Flags().Lookup("port")) // nolint
 
 	rootCmd.Flags().StringP("topic", "t", "", "Topic in the GCP PubSub to publish events")
-	viper.BindPFlag("topic", rootCmd.Flags().Lookup("topic"))
+	viper.BindPFlag("topic", rootCmd.Flags().Lookup("topic")) // nolint
 
 	rootCmd.Flags().StringP("project-id", "P", "", "GCP ProjectId")
-	viper.BindPFlag("project-id", rootCmd.Flags().Lookup("project-id"))
+	viper.BindPFlag("project-id", rootCmd.Flags().Lookup("project-id")) // nolint
 }
 
 // initConfig reads in config file and ENV variables if set.
