@@ -7,7 +7,6 @@ import (
 	"context"
 	"fmt"
 	"livekit-webhook-proxy/types"
-	"livekit-webhook-proxy/utils"
 	"log"
 	"os"
 	"strings"
@@ -28,12 +27,9 @@ and manages to publish them in a GCP PubSub topic.`,
 	Run: func(cmd *cobra.Command, args []string) {
 		ctx := context.Background()
 
-		pm := utils.PromMetrics{}
-		pm.StartPrometheus(viper.GetBool("prometheus.enable"), viper.GetInt("prometheus.port"))
-
 		proxy := types.Proxy{}
 
-		proxy.Init(ctx)
+		proxy.Init(ctx, viper.GetBool("prometheus.enable"), viper.GetInt("prometheus.port"))
 
 	},
 }
